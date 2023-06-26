@@ -1,0 +1,322 @@
+:root {
+    --colorPrimary: hsl(108, 99%, 34%);
+    --colorSecondary: hsl(48, 91%, 68%);
+    --colorDark: hsl(237, 11%, 34%);
+    --colorWhite: #fff;
+    --colorPrimaryLight: hsl(166, 73%, 46%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    color: var(--colorDark);
+}
+
+/*----------------------------------------- Header Start -----------------------------------------*/
+
+header {
+    padding: 2rem 5rem;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrapper .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper .logo .logo-img {
+    align-self: flex-end;
+}
+
+.header-wrapper .logo .logo-name {
+    font-size: 1.5rem;
+}
+
+.header-wrapper nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-wrapper nav .nav-list ul {
+    list-style: none;
+    display: flex;
+    gap: 1.7rem;
+    align-items: center;
+}
+
+.header-wrapper nav .nav-list ul li a {
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-wrapper nav .nav-list ul li a:hover {
+    color: var(--colorPrimary);
+}
+
+.header-wrapper nav .nav-buttons button {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2.25rem;
+    border: none;
+    transition: background-color 300ms;
+    cursor: pointer;
+}
+
+.header-wrapper nav .nav-buttons .nav-button-login {
+    background-color: var(--colorWhite);
+    color: var(--colorPrimary);
+
+    /* border: 1px solid var(--colorPrimary); */
+}
+
+.header-wrapper nav .nav-buttons .nav-button-login:hover {
+    background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+.header-wrapper nav .nav-buttons .nav-button-startfree {
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.header-wrapper nav .nav-buttons .nav-button-startfree:hover {
+    background-color: var(--colorPrimaryLight);
+}
+
+.mobile-nav-toggler{
+    display: none;
+}
+
+.mobile-nav-toggler div{
+    width: 1.75rem;
+    height: 3px;
+    background-color: hsl(0, 0%, 11%);
+    margin: 5px;
+    transition: transform 500ms, opacity 500ms;
+}
+
+/*----------------------------------------- Header End -----------------------------------------*/
+
+
+
+/*----------------------------------------- Main Start -----------------------------------------*/
+
+main {
+    padding: 3rem;
+}
+
+main section>h1 {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 3rem;
+    max-width: 700px;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.plansContainer {
+    margin: 1rem auto;
+    max-width: 1000px;
+    padding: 2rem;
+}
+
+.plans-monthly,
+.plans-yearly {
+    gap: 1.5rem;
+    display: flex;
+}
+
+.plansContainer[plan-selected='yearly'] .plans-monthly {
+    display: none;
+}
+
+.plansContainer[plan-selected='monthly'] .plans-yearly {
+    display: none;
+}
+
+.plan {
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+}
+
+
+.plan-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-wrapper h2 {
+    margin: 1rem 0;
+}
+
+.plan-wrapper .plan-price div {
+    display: inline;
+}
+
+.plan-wrapper .plan-price .plan-price-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.plan-wrapper .plan-button {
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2.25rem;
+    border: none;
+    transition: background-color 300ms;
+    background-color: var(--colorPrimary);
+    color: var(--colorWhite);
+}
+
+.plan-wrapper .plan-button:hover {
+    background-color: var(--colorPrimaryLight);
+}
+
+.plan-divider {
+    height: 1px;
+    width: 95%;
+    margin: 1rem 0;
+    background: hsl(237, 11%, 34%, 0.5);
+    ;
+}
+
+.plan-benefits-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+.plan-benefits-wrapper>div {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+
+
+
+.addOns {
+    margin: 3rem auto;
+    max-width: 1000px;
+}
+
+.addOnContainer {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+}
+
+.addOns .addOnContainer .addOn {
+    padding: 2rem 1rem;
+    min-width: 250px;
+    border: 1px solid hsl(237, 11%, 34%, 0.5);
+    border-radius: 1rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addOn-detail h1 {
+    margin-bottom: 1rem;
+}
+
+.addOn-price {
+    align-self: flex-end;
+}
+
+.addOn .addOn-price div {
+    display: inline;
+}
+
+.addOn .addOn-price .addOn-price-bold {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.FA-checkbox{
+    display: none;
+}
+
+.FAquestions{
+    margin: 7rem auto 0 auto;
+    max-width: 800px;
+}
+
+.FAquestions-wrapper{
+    padding: 0.5rem 0;
+}
+
+.FAquestion{
+    overflow: hidden;
+    margin: 2rem 0;
+    border-bottom: 1px solid hsl(237, 11%, 34%, 0.5);
+    padding-bottom: 10px;
+}
+
+
+
+.FAtoggle{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question{
+    font-size: 1.3rem;
+}
+
+.FAanswer{
+    margin-top: 0.5rem;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 500ms ease-in-out;
+}
+
+.FAtoggle.active+.FAanswer{
+    max-height: 100vh;
+}
+.FAquestion .FAtoggle div img{
+    width: 2rem;
+    transition: transform 300ms;
+}
+.FAtoggle.active div img{
+    transform: rotateZ(180deg);
+}
+
+/*----------------------------------------- Main End -----------------------------------------*/
+
+
+
+/*----------------------------------------- Footer Start -----------------------------------------*/
+/*----------------------------------------- Footer End -----------------------------------------*/

@@ -1,0 +1,67 @@
+.toggle-outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 350px;
+    height: 64px;
+    max-width: 100%;
+    cursor: pointer;
+    background-color: #f0f5f0;
+    border-radius: 50px;
+    padding: 6px 20px 6px 25px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem auto;
+}
+
+.toggle-monthly, .toggle-yearly, .toggle-yearly *{
+    z-index: 1;
+    transition: 300ms;
+}
+
+
+.toggle-selected {
+    left: 0;
+    right: auto;
+    border-radius: 50px;
+    position: absolute;
+    height: 64px;
+    width: 110px;
+    background: var(--colorPrimary);
+    transition: 300ms;
+}
+
+.toggle-outer {
+    color: rgb(0, 60, 47);
+}
+
+.toggle-yearly {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.toggle-yearly .toggle-yearly-extraMonth {
+    background: green;
+    color: white;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+.toggle-outer[plan-selected='monthly'] .toggle-monthly {
+    color: #f0f5f0;
+}
+
+.toggle-outer[plan-selected='yearly'] .toggle-yearly .toggle-text{
+    color: #f0f5f0;
+}
+
+.toggle-outer[plan-selected='yearly'] .toggle-selected {
+    transform: translateX(110px);
+    width: 240px;
+}
+.toggle-outer[plan-selected='yearly'] .toggle-yearly-extraMonth {
+    background: white;
+    color: green;
+}

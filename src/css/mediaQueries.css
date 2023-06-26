@@ -1,0 +1,168 @@
+@media screen and (max-width:1000px) {
+    header {
+        padding: 2rem 2rem;
+    }
+
+    .plans-monthly,
+    .plans-yearly {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        width: 80%;
+    }
+    .plan-wrapper{
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .mobile-nav-toggler {
+        display: block;
+        z-index: 99999;
+    }
+
+    .mobile-nav-toggler[area-expanded="true"] .line1 {
+        transform: translate(0, 0.5rem) rotate(45deg);
+    }
+
+    .mobile-nav-toggler[area-expanded="true"] .line2 {
+        transform: rotatez(180deg);
+        opacity: 0;
+    }
+
+    .mobile-nav-toggler[area-expanded="true"] .line3 {
+        transform: translate(0, -0.5rem) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem 3rem;
+    }
+
+    .header-wrapper {
+        position: relative;
+    }
+
+    .header-wrapper nav {
+        position: fixed;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5rem;
+        top: 0;
+        right: 0;
+        width: 75%;
+        background: hsla(0, 0%, 100%, 0.4);
+        backdrop-filter: blur(2rem);
+        z-index: 9999;
+        padding: max(5rem, 15%) 1rem;
+        transform: translate(100%);
+        transition: transform 500ms;
+    }
+
+    .header-wrapper nav .nav-list ul li a {
+        font-size: 1.5rem;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+
+    .header-wrapper nav .nav-buttons button {
+        font-size: 1.3rem;
+    }
+
+    .header-wrapper nav .nav-buttons .nav-button-login {
+        background-color: transparent;
+        color: var(--colorPrimary);
+    }
+
+    .header-wrapper nav[data-visible='true'] {
+        transform: translate(0%);
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    main section>h1 {
+        font-size: 2rem;
+    }
+
+    .plansContainer {
+        padding: 2rem 0.5rem;
+    }
+
+    .plan{
+        width: 95%;
+    }
+
+    .addOnContainer{
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:400px){
+    .plan-selector{
+        font-size: 0.85rem;
+    }
+    main{
+        padding: 1rem;
+    }
+    main section>h1{
+        font-size: 1.5rem;
+    }
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .toggle-outer{
+        padding: 6px 15px 6px 10px;
+        width: 90%;
+        height: 175px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .toggle-selected{
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 80px;
+    }
+    .toggle-outer[plan-selected='yearly'] .toggle-selected {
+        transform: translateY(80px);
+        width: 100%;
+        height: 100px;
+    }
+    .toggle-yearly{
+        flex-direction: column;
+    }
+
+
+    .addOn h1{
+        font-size: 1.2rem;
+    }
+    .FAquestions{
+        width: 90%;
+    }
+    .question{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:360px){
+    header {
+        padding: 1rem 1rem;
+    }
+    main{
+        padding: 0.5rem;
+    }
+}
