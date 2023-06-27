@@ -153,6 +153,7 @@ main section>h1 {
 }
 
 .plan {
+    position: relative;
     width: 100%;
     text-align: center;
     border-radius: 1rem;
@@ -218,6 +219,7 @@ main section>h1 {
     gap: 1rem;
     font-size: 0.9rem;
     text-align: left;
+    align-items: center;
 }
 
 
